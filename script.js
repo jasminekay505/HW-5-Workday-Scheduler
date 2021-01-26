@@ -47,6 +47,7 @@ $(document).ready(function () {
         })
     }
 
+    //Call formatting function
     format();
 
     //Set up array for local storage objects
