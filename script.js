@@ -1,6 +1,5 @@
 $(document).ready(function () {
 
-    //localStorage.clear();
     //Display current time and date
     var currentDate = moment().format('MMMM Do YYYY, h:mm a');
     $("#currentDay").text(currentDate);
@@ -22,21 +21,21 @@ $(document).ready(function () {
         newHour.text(hours[i])
     }
 
-    //Set up color formatting based on time
-    function format () { 
+    //Set up color formatting based on current time
+    function format() {
         var currentTime = moment().hour();
         $(".description").each(function () {
             var blockTime = parseInt($(this).siblings(".hour").text());
             //Convert to military time for the afternoon hours
-            if (blockTime < 6) { 
+            if (blockTime < 6) {
                 blockTime = blockTime + 12
             }
             //Change formatting of description box based on current time
-            if (blockTime < currentTime) { 
+            if (blockTime < currentTime) {
                 $(this).removeClass("future");
                 $(this).removeClass("present");
                 $(this).addClass("past");
-            } else if (blockTime === currentTime) { 
+            } else if (blockTime === currentTime) {
                 $(this).removeClass("future");
                 $(this).addClass("present");
                 $(this).removeClass("past");
@@ -52,11 +51,12 @@ $(document).ready(function () {
 
     //Set up array for local storage objects
     var todoFromStorage = JSON.parse(localStorage.getItem("entry"));
-    if (!todoFromStorage) { 
+    if (!todoFromStorage) {
         todoFromStorage = [];
     }
+
     //When save button is clicked, store the input and time in local storage
-    $(".saveBtn").on("click", function () { 
+    $(".saveBtn").on("click", function () {
         var newText = $(this).siblings(".description").val();
         var newTime = parseInt($(this).siblings(".hour").text());
         var newEntry = {
@@ -68,10 +68,9 @@ $(document).ready(function () {
 
         localStorage.setItem("entry", JSON.stringify(todoFromStorage));
     })
-    console.log(todoFromStorage);
 
-    //Get items from local storage if applicable
-    if (todoFromStorage.length > 0) { 
+    //Display text from local storage if applicable
+    if (todoFromStorage.length > 0) {
         for (var i = 0; i < todoFromStorage.length; i++) {
             if (parseInt(todoFromStorage[i].time) === 9) {
                 $(".9").text(todoFromStorage[i].text);
@@ -100,6 +99,6 @@ $(document).ready(function () {
             if (parseInt(todoFromStorage[i].time) === 5) {
                 $(".5").text(todoFromStorage[i].text);
             }
-         }
+        }
     }
 });
