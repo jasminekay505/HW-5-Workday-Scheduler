@@ -1,4 +1,4 @@
-# HW-5-Workday-Scheduler
+# Workday-Scheduler
 
 This application is a simple calendar that allows the user to save events for each hour of the standard workday. The current date and time is displayed at the top of the page. Hour long time slots are color coded according to the key below:
 - Gray is past
