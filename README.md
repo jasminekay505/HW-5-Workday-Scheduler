@@ -8,7 +8,7 @@ This application is a simple calendar that allows the user to save events for ea
 To enter a task, simply click inside the hour and type. To save, click the save button. When the page is refreshed, the tasks entered by the user will still be displayed. 
 
 *Link to Application*
-https://jasminekay505.github.io/HW-5-Workday-Scheduler/
+https://jasminekay505.github.io/Workday-Scheduler/
 
 *Screenshot of Application*
 ![image](https://user-images.githubusercontent.com/74380703/105894796-833fe500-5fc9-11eb-95ff-6dffd9902906.png)
