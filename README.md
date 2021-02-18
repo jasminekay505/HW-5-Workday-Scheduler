@@ -12,7 +12,7 @@ https://jasminekay505.github.io/Workday-Scheduler/
 
 # Technologies Used
   * HTML
-  * CSS
+  * CSS (Bootstrap)
   * JavaScript
   * jQuery
 
